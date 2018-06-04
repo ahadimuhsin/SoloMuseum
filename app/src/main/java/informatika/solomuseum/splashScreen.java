@@ -7,19 +7,24 @@ import android.content.*;
 //class untuk menampilkan splash screen
 public class splashScreen extends Activity {
 
-    protected void onCreate (Bundle savedInstanceState){
-       super.onCreate(savedInstanceState);
-       setContentView(R.layout.splash_screen);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.splash_screen);
 
-       new Handler().postDelayed(new Runnable() {
-           @Override
-           public void run() {
-               //setelah spalsh screem, tampil MainActivity
-               Intent intent = new Intent (splashScreen.this,
-                       MainActivity.class);
-               startActivity(intent);
-               finish();
-           }
-       }, 3000); //set waktu splash selama 3 detik
+        Thread myThread = new Thread(){
+            public void run (){
+                try{
+                    sleep(3000);
+                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+                catch (InterruptedException e){
+                    e.printStackTrace();
+                }
+            }
+        };
+        myThread.start();
     }
 }

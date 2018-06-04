@@ -4,140 +4,144 @@
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background3"
     tools:context=".DetailMuseumActivity">
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@drawable/background"
-        >
+        android:scrollbarAlwaysDrawVerticalTrack="true">
+
 
         <FrameLayout
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:layout_marginBottom="50dp"
             android:layout_gravity="center"
-            >
+            android:layout_marginBottom="50dp"
+            android:layout_marginTop="50dp">
+
             <ImageView
+                android:id="@+id/imageview"
                 android:layout_width="300dp"
                 android:layout_height="200dp"
-                android:adjustViewBounds="true"
                 android:layout_gravity="top"
-                android:id="@+id/imageview"
-                android:scaleType="fitXY"
-                />
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY" />
 
         </FrameLayout>
 
-<android.support.v7.widget.CardView
-    android:layout_width="350dp"
-    android:layout_height="match_parent"
-    android:layout_gravity="center"
-    card_view:cardBackgroundColor="@android:color/transparent"
-    android:layout_marginTop="10dp"
-    android:id="@+id/card_detail"
-    >
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_detail"
+            android:layout_width="350dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            card_view:cardBackgroundColor="@android:color/transparent">
 
 
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/activity_vertical_margin"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:layout_marginRight="@dimen/activity_horizontal_margin">
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom ="@dimen/activity_vertical_margin">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:text="Nama :"
-                android:textSize="14sp"/>
-            <TextView
-                android:id="@+id/tvNamaMuseum"
+            <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Nama "
-                android:textSize="14sp"
-                />
-            </TableRow>
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin">
 
-            <TableRow
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom ="@dimen/activity_vertical_margin">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-
-                    android:text="Alamat :"
-                    android:textSize="14sp"/>
-                <TextView
-                    android:id="@+id/tvAlamatMuseum"
+                <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Alamat"
-                    android:textSize="14sp"
-                    />
-            </TableRow>
+                    android:layout_marginBottom="@dimen/activity_vertical_margin">
 
-            <TableRow
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom ="@dimen/activity_vertical_margin">
-                <TextView
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Nama :"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvNamaMuseum"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Nama "
+                        android:textSize="14sp" />
+                </TableRow>
+
+                <TableRow
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin">
 
-                    android:text="Deskripsi : "
-                    android:textSize="14sp"/>
-                <TextView
-                    android:id="@+id/tvDeskripsiMuseum"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Deskripsi"
-                    android:textSize="14sp"
-                    />
-            </TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
 
-            <TableRow
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom ="@dimen/activity_vertical_margin">
-                <TextView
+                        android:text="Alamat :"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvAlamatMuseum"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Alamat"
+                        android:textSize="14sp" />
+                </TableRow>
+
+                <TableRow
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin">
 
-                    android:text="Jam :"
-                    android:textSize="14sp"/>
-                <TextView
-                    android:id="@+id/tvJamMuseum"
-                    android:layout_width="match_parent"
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Deskripsi : "
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvDeskripsiMuseum"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Deskripsi"
+                        android:textSize="14sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Jam"
-                    android:textSize="14sp"
-                    />
-            </TableRow>
+                    android:layout_marginBottom="@dimen/activity_vertical_margin">
 
-        </TableLayout>
-</android.support.v7.widget.CardView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Jam :"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvJamMuseum"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Jam"
+                        android:textSize="14sp" />
+                </TableRow>
+
+            </TableLayout>
+        </android.support.v7.widget.CardView>
+
         <Button
+            android:id="@+id/btn_maps"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Lihat Rute"
             android:layout_gravity="center"
-            android:id="@+id/btn_maps"/>
+            android:text="Lihat Rute" />
 
 
     </LinearLayout>

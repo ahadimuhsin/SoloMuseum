@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:theme="@style/Theme.AppCompat"
+    tools:context=".splashScreen">
 
     <ImageView
-        android:layout_width="300px"
-        android:layout_height="300px"
-        android:src ="@drawable/ic_launcher_foreground"
-        android:id="@+id/splash"
+        android:id="@+id/imageView"
+        android:layout_width="116dp"
+        android:layout_height="133dp"
+
         android:layout_centerInParent="true"
-        android:scaleY="1.0"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"/>
+        android:layout_gravity="center"
+        android:allowBackup="true"
+        android:contentDescription="@string/app_name"
+        android:scaleX="1.0"
+        android:src="@drawable/logo" />
 
 </RelativeLayout>
